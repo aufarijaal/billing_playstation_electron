@@ -1,0 +1,263 @@
+-- Get All table names
+SELECT
+    name
+FROM
+    sqlite_schema
+WHERE
+    type = 'table' AND
+    name NOT LIKE 'sqlite_%';
+
+INSERT INTO operators (username, password, full_access) VALUES
+('Owner', 'rahasia', 1),
+('Operator 1', 'rahasia', 0),
+('Operator 2', 'rahasia', 0),
+('Operator 3', 'rahasia', 0);
+
+SELECT * FROM operators;
+
+INSERT INTO playstations VALUES
+(1, (3000 / 60)),
+(2, (4000 / 60)),
+(3, (5000 / 60)),
+(4, (6000 / 60)),
+(5, (7000 / 60)),
+(6, (8000 / 60)),
+(7, (10 / 60));
+
+UPDATE playstations SET tarif_per_menit = (10000 / 60) WHERE versi = 7;
+SELECT * FROM playstations;
+
+INSERT INTO meja_main VALUES
+(1, 7, null),
+(2, 1, null),
+(3, 5, null),
+(4, 3, null),
+(5, 1, null),
+(6, 6, null),
+(7, 1, null),
+(8, 6, null),
+(9, 7, null),
+(10, 4, null),
+(11, 1, null),
+(12, 4, null),
+(13, 3, null),
+(14, 1, null),
+(15, 6, null),
+(16, 5, null),
+(17, 1, null),
+(18, 2, null),
+(19, 4, null),
+(20, 1, null),
+(21, 5, null),
+(22, 5, null),
+(23, 5, null),
+(24, 2, null),
+(25, 5, null),
+(26, 4, null),
+(27, 4, null),
+(28, 4, null),
+(29, 6, null),
+(30, 7, null);
+
+SELECT * FROM meja_main;
+
+INSERT INTO logistik (nama_produk, harga) VALUES
+('Fond - Chocolate', 10332),
+('Steampan - Half Size Shallow', 4730),
+('Octopus', 16246),
+('Mortadella', 11487),
+('Beef - Tongue, Fresh', 14964),
+('Fish - Artic Char, Cold Smoked', 30628),
+('Ecolab Crystal Fusion', 25906),
+('Bread - Mini Hamburger Bun', 45244),
+('Cherries - Frozen', 30224),
+('Tea - Decaf Lipton', 39582),
+('Lamb - Leg, Bone In', 21010),
+('Beef - Top Sirloin', 6733),
+('Turkey Leg With Drum And Thigh', 7187),
+('Coriander - Seed', 26310),
+('Dried Apple', 2724),
+('Bread - Roll, Whole Wheat', 3453),
+('Snapple - Mango Maddness', 11590),
+('Water - Perrier', 35669),
+('Red Snapper - Fillet, Skin On', 45205),
+('Lettuce - Green Leaf', 44228);
+
+SELECT * FROM logistik;
+
+INSERT INTO paket_sewa (nama_paket, harga) VALUES
+('Illinois New Beauty', 10332),
+('Soft Account transition', 4730),
+('Shoes matrices', 16246),
+('optimize payment', 11487),
+('architect', 14964),
+('paradigm', 30628);
+
+SELECT * FROM paket_sewa;
+
+INSERT INTO pengeluaran (op, deskripsi, nominal, dikeluarkan_pada) VALUES
+    ('Operator 1', 'Pembelian PS5 console', 750000.0, '2023-01-15 09:30:00'),
+    ('Operator 2', 'Restock kantin snacks', 25000.0, '2023-02-25 14:15:00'),
+    ('Operator 3', 'Pembelian PS4 games', 120000.0, '2023-03-10 11:45:00'),
+    ('Operator 1', 'Pembelian food ingredients', 45000.0, '2023-04-02 16:00:00'),
+    ('Operator 2', 'Pembayaran pemasok snacks', 180000.0, '2023-05-20 10:30:00'),
+    ('Operator 3', 'Beli drinks and beverages', 35000.0, '2023-06-08 12:00:00'),
+    ('Operator 1', 'Perbaikan PS controllers', 65000.0, '2023-07-15 14:45:00'),
+    ('Operator 2', 'Pembelian PS accessories', 120000.0, '2023-08-05 11:00:00'),
+    ('Operator 3', 'Pembayaran delivery service', 50000.0, '2023-09-28 09:30:00'),
+    ('Operator 1', 'Pembelian kantin supplies', 90000.0, '2023-10-17 13:15:00'),
+    ('Operator 2', 'Pembayaran iklan online', 55000.0, '2023-11-10 15:30:00'),
+    ('Operator 3', 'Beli PlayStation merchandise', 75000.0, '2023-12-05 10:00:00'),
+    ('Operator 1', 'Pengadaan drinks and beverages', 30000.0, '2023-01-08 08:45:00'),
+    ('Operator 2', 'Pembelian PS5 games', 95000.0, '2023-02-23 12:15:00'),
+    ('Operator 3', 'Biaya PlayStation tournament', 180000.0, '2023-03-18 14:30:00'),
+    ('Operator 1', 'Pembayaran kantin rent', 120000.0, '2023-04-30 16:00:00'),
+    ('Operator 2', 'Pembelian snacks inventory', 240000.0, '2023-05-15 10:30:00'),
+    ('Operator 3', 'Pembayaran insurance', 80000.0, '2023-06-20 12:00:00'),
+    ('Operator 1', 'Pembelian PS controllers', 45000.0, '2023-07-08 14:45:00'),
+    ('Operator 2', 'Maintenance vending machines', 70000.0, '2023-08-02 11:00:00'),
+('Operator 3', 'Pembelian PS5 games', 125000.0, '2023-08-20 09:30:00'),
+('Operator 1', 'Restock kantin snacks', 30000.0, '2023-09-05 14:15:00'),
+('Operator 2', 'Pembelian drinks and beverages', 55000.0, '2023-10-10 11:45:00'),
+('Operator 3', 'Pembelian PlayStation merchandise', 70000.0, '2023-11-12 16:00:00'),
+('Operator 1', 'Pembayaran delivery service', 40000.0, '2023-12-15 10:30:00'),
+('Operator 2', 'Beli drinks and beverages', 25000.0, '2023-01-18 12:00:00'),
+('Operator 3', 'Pembelian snacks inventory', 120000.0, '2023-02-20 14:45:00'),
+('Operator 1', 'Pembelian PS accessories', 95000.0, '2023-03-22 11:00:00'),
+('Operator 2', 'Pembayaran kantin rent', 110000.0, '2023-04-25 09:30:00'),
+('Operator 3', 'Pembelian PS4 games', 60000.0, '2023-05-28 14:15:00'),
+('Operator 1', 'Biaya PlayStation tournament', 175000.0, '2023-06-30 11:45:00'),
+('Operator 2', 'Pengadaan drinks and beverages', 40000.0, '2023-07-12 16:00:00'),
+('Operator 3', 'Pembelian food ingredients', 35000.0, '2023-08-14 10:30:00'),
+('Operator 1', 'Maintenance vending machines', 60000.0, '2023-09-16 12:00:00'),
+('Operator 2', 'Pembelian PS5 console', 900000.0, '2023-10-18 14:45:00'),
+('Operator 3', 'Pembayaran iklan online', 42000.0, '2023-11-20 11:00:00'),
+('Operator 1', 'Pembelian kantin supplies', 85000.0, '2023-12-22 09:30:00'),
+('Operator 2', 'Pembayaran pemasok snacks', 160000.0, '2024-01-25 14:15:00'),
+('Operator 3', 'Pembelian PS accessories', 75000.0, '2024-02-28 11:45:00'),
+('Operator 1', 'Pembayaran insurance', 65000.0, '2024-03-30 16:00:00'),
+('Operator 2', 'Beli PlayStation merchandise', 50000.0, '2024-04-10 10:30:00'),
+('Operator 3', 'Pembelian PS5 games', 125000.0, '2023-08-20 09:30:00'),
+('Operator 1', 'Restock kantin snacks', 30000.0, '2023-09-05 14:15:00'),
+('Operator 2', 'Pembelian drinks and beverages', 55000.0, '2023-10-10 11:45:00'),
+('Operator 3', 'Pembelian PlayStation merchandise', 70000.0, '2023-11-12 16:00:00'),
+('Operator 1', 'Pembayaran delivery service', 40000.0, '2023-12-15 10:30:00'),
+('Operator 2', 'Beli drinks and beverages', 25000.0, '2023-01-18 12:00:00'),
+('Operator 3', 'Pembelian snacks inventory', 120000.0, '2023-02-20 14:45:00'),
+('Operator 1', 'Pembelian PS accessories', 95000.0, '2023-03-22 11:00:00'),
+('Operator 2', 'Pembayaran kantin rent', 110000.0, '2023-04-25 09:30:00'),
+('Operator 3', 'Pembelian PS4 games', 60000.0, '2023-05-28 14:15:00'),
+('Operator 1', 'Biaya PlayStation tournament', 175000.0, '2023-06-30 11:45:00'),
+('Operator 2', 'Pengadaan drinks and beverages', 40000.0, '2023-07-12 16:00:00'),
+('Operator 1', 'Pembelian PS5 games', 95000.0, '2023-08-28 09:30:00'),
+('Operator 2', 'Restock kantin snacks', 28000.0, '2023-09-10 14:15:00'),
+('Operator 3', 'Pembelian drinks and beverages', 60000.0, '2023-10-15 11:45:00'),
+('Operator 1', 'Pembelian PlayStation merchandise', 80000.0, '2023-11-20 16:00:00'),
+('Operator 2', 'Pembayaran delivery service', 42000.0, '2023-12-25 10:30:00'),
+('Operator 3', 'Beli drinks and beverages', 28000.0, '2023-01-05 12:00:00'),
+('Operator 1', 'Pembelian snacks inventory', 125000.0, '2023-02-15 14:45:00'),
+('Operator 2', 'Pembelian PS accessories', 78000.0, '2023-03-20 11:00:00'),
+('Operator 3', 'Pembayaran kantin rent', 100000.0, '2023-04-25 09:30:00'),
+('Operator 1', 'Pembelian PS4 games', 48000.0, '2023-05-30 14:15:00'),
+('Operator 2', 'Biaya PlayStation tournament', 150000.0, '2023-06-30 11:45:00'),
+('Operator 3', 'Pengadaan drinks and beverages', 35000.0, '2023-07-10 16:00:00'),
+('Operator 1', 'Pembelian food ingredients', 40000.0, '2023-08-14 10:30:00'),
+('Operator 2', 'Maintenance vending machines', 55000.0, '2023-09-16 12:00:00'),
+('Operator 3', 'Pembelian PS5 console', 850000.0, '2023-10-18 14:45:00'),
+('Operator 1', 'Pembayaran iklan online', 38000.0, '2023-11-20 11:00:00'),
+('Operator 2', 'Pembelian kantin supplies', 78000.0, '2023-12-22 09:30:00'),
+('Operator 3', 'Pembayaran pemasok snacks', 145000.0, '2024-01-25 14:15:00'),
+('Operator 1', 'Pembelian PS accessories', 72000.0, '2024-02-28 11:45:00'),
+('Operator 2', 'Pembayaran insurance', 60000.0, '2024-03-30 16:00:00'),
+('Operator 3', 'Beli PlayStation merchandise', 42000.0, '2024-04-10 10:30:00'),
+('Operator 3', 'Pembelian PS5 games', 135000.0, '2023-08-25 09:30:00'),
+('Operator 1', 'Restock kantin snacks', 32000.0, '2023-09-08 14:15:00'),
+('Operator 2', 'Pembelian drinks and beverages', 58000.0, '2023-10-12 11:45:00'),
+('Operator 3', 'Pembelian PlayStation merchandise', 72000.0, '2023-11-16 16:00:00'),
+('Operator 1', 'Pembayaran delivery service', 44000.0, '2023-12-18 10:30:00'),
+('Operator 2', 'Beli drinks and beverages', 26000.0, '2023-01-20 12:00:00'),
+('Operator 3', 'Pembelian snacks inventory', 118000.0, '2023-02-22 14:45:00'),
+('Operator 1', 'Pembelian PS accessories', 97000.0, '2023-03-28 11:00:00'),
+('Operator 2', 'Pembayaran kantin rent', 105000.0, '2023-04-30 09:30:00'),
+('Operator 3', 'Pembelian PS4 games', 62000.0, '2023-05-29 14:15:00'),
+('Operator 1', 'Biaya PlayStation tournament', 170000.0, '2023-06-20 11:45:00'),
+('Operator 2', 'Pengadaan drinks and beverages', 38000.0, '2023-07-12 16:00:00'),
+('Operator 3', 'Pembelian food ingredients', 33000.0, '2023-08-15 10:30:00'),
+('Operator 1', 'Maintenance vending machines', 67000.0, '2023-09-17 12:00:00'),
+('Operator 2', 'Pembelian PS5 console', 920000.0, '2023-10-22 14:45:00'),
+('Operator 3', 'Pembayaran iklan online', 44000.0, '2023-11-18 11:00:00'),
+('Operator 1', 'Pembelian kantin supplies', 82000.0, '2023-12-20 09:30:00'),
+('Operator 2', 'Pembayaran pemasok snacks', 150000.0, '2024-01-22 14:15:00'),
+('Operator 3', 'Pembelian PS accessories', 70000.0, '2024-02-28 11:45:00'),
+('Operator 1', 'Pembayaran insurance', 61000.0, '2024-03-25 16:00:00'),
+('Operator 2', 'Beli PlayStation merchandise', 47000.0, '2024-04-15 10:30:00'),
+('Operator 1', 'Pembelian PS5 games', 110000.0, '2023-08-15 09:30:00'),
+('Operator 2', 'Restock kantin snacks', 24000.0, '2023-09-18 14:15:00'),
+('Operator 3', 'Pembelian drinks and beverages', 57000.0, '2023-10-22 11:45:00'),
+('Operator 1', 'Pembelian PlayStation merchandise', 69000.0, '2023-11-25 16:00:00'),
+('Operator 2', 'Pembayaran delivery service', 38000.0, '2023-12-28 10:30:00'),
+('Operator 3', 'Beli drinks and beverages', 21000.0, '2023-01-08 12:00:00'),
+('Operator 1', 'Pembelian snacks inventory', 128000.0, '2023-02-18 14:45:00'),
+('Operator 2', 'Pembelian PS accessories', 87000.0, '2023-03-23 11:00:00'),
+('Operator 3', 'Pembayaran kantin rent', 95000.0, '2023-04-30 09:30:00'),
+('Operator 1', 'Pembelian PS4 games', 58000.0, '2023-05-22 14:15:00'),
+('Operator 2', 'Biaya PlayStation tournament', 155000.0, '2023-06-20 11:45:00'),
+('Operator 3', 'Pengadaan drinks and beverages', 32000.0, '2023-07-12 16:00:00'),
+('Operator 1', 'Pembelian food ingredients', 39000.0, '2023-08-14 10:30:00'),
+('Operator 2', 'Maintenance vending machines', 53000.0, '2023-09-17 12:00:00'),
+('Operator 3', 'Pembelian PS5 console', 880000.0, '2023-10-22 14:45:00'),
+('Operator 1', 'Pembayaran iklan online', 42000.0, '2023-11-18 11:00:00'),
+('Operator 2', 'Pembelian kantin supplies', 72000.0, '2023-12-20 09:30:00'),
+('Operator 3', 'Pembayaran pemasok snacks', 138000.0, '2024-01-22 14:15:00'),
+('Operator 1', 'Pembelian PS accessories', 66000.0, '2024-02-28 11:45:00'),
+('Operator 2', 'Pembayaran insurance', 58000.0, '2024-03-25 16:00:00'),
+('Operator 3', 'Beli PlayStation merchandise', 48000.0, '2024-04-15 10:30:00'),
+('Operator 1', 'Purchase PS5 games', 108000.0, '2023-08-18 09:30:00'),
+('Operator 2', 'Restock canteen snacks', 23000.0, '2023-09-20 14:15:00'),
+('Operator 3', 'Buying drinks and beverages', 58000.0, '2023-10-23 11:45:00'),
+('Operator 1', 'Acquiring PlayStation merchandise', 71000.0, '2023-11-26 16:00:00'),
+('Operator 2', 'Delivery service payment', 39000.0, '2023-12-30 10:30:00'),
+('Operator 3', 'Purchasing drinks and beverages', 20500.0, '2023-01-10 12:00:00'),
+('Operator 1', 'Stocking up snacks inventory', 126000.0, '2023-02-22 14:45:00'),
+('Operator 2', 'PS accessories purchase', 89000.0, '2023-03-25 11:00:00'),
+('Operator 3', 'Rent payment for canteen', 98000.0, '2023-04-28 09:30:00'),
+('Operator 1', 'Procuring PS4 games', 57000.0, '2023-05-21 14:15:00'),
+('Operator 2', 'Expenses for PlayStation tournament', 160000.0, '2023-06-19 11:45:00'),
+('Operator 3', 'Acquiring beverages and drinks', 33500.0, '2023-07-13 16:00:00'),
+('Operator 1', 'Purchase of food ingredients', 41200.0, '2023-08-12 10:30:00'),
+('Operator 2', 'Vending machine maintenance', 52600.0, '2023-09-19 12:00:00'),
+('Operator 3', 'Buying PS5 console', 870000.0, '2023-10-20 14:45:00'),
+('Operator 1', 'Payment for online advertising', 43500.0, '2023-11-17 11:00:00'),
+('Operator 2', 'Procuring canteen supplies', 74000.0, '2023-12-19 09:30:00'),
+('Operator 3', 'Supplier payment for snacks', 147500.0, '2024-01-20 14:15:00'),
+('Operator 1', 'Purchase of PS accessories', 68500.0, '2024-02-24 11:45:00'),
+('Operator 2', 'Insurance payment', 59500.0, '2024-03-28 16:00:00'),
+('Operator 3', 'Acquiring PlayStation merchandise', 46700.0, '2024-04-14 10:30:00');
+
+UPDATE pengeluaran
+SET nominal = CAST(nominal AS INTEGER);
+
+INSERT INTO playstations VALUES (9, 100) RETURNING *;
+
+select
+	meja_main.nomor_meja,
+	meja_main.versi_ps,
+	playstations.tarif_per_menit,
+	meja_main.hold_id,
+	lb.op AS laporan_op,
+	lb.versi_ps as laporan_versi_ps,
+	lb.jenis_main as laporan_jenis_main,
+	lb.paket_main as laporan_paket_main,
+	lb.waktu_mulai as laporan_waktu_mulai,
+	lb.waktu_selesai as laporan_waktu_selesai,
+	lb.lama_main as laporan_lama_main,
+	lb.konsumsi as laporan_konsumsi,
+	lb.total_bayar_main as laporan_total_bayar_main,
+	lb.total_bayar_konsumsi as laporan_total_bayar_konsumsi,
+	lb.total_bayar_semua as laporan_total_bayar_semua
+from
+	`meja_main`
+left join `playstations` on
+	`meja_main`.`versi_ps` = `playstations`.`versi`
+left join `laporan_billing` lb on
+	`meja_main`.`hold_id` = `lb`.`id`;

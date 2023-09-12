@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 5px;
+        max-width: 58mm;
+        font-size: 0.86rem;
+        font-family: sans-serif;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+      .font-bold {
+        font-weight: 600;
+      }
+      .receipt-konsumsi {
+        display: flex;
+        justify-content: space-between;
+      }
+      .receipt-bayar-konsumsi {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      #receipt-bayar-main {
+        display: flex;
+        justify-content: space-between;
+      }
+      .nominal {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="text-center font-bold" id="receipt-title">AM GAME</div>
+      <div class="text-center font-bold" id="receipt-title-2">TEGAL</div>
+      <div class="text-center" id="receipt-address">
+        Lorem ipsum dolor sit amet consectetur
+      </div>
+      <hr />
+      <div id="receipt-nmr">nmr: 12</div>
+      <div id="receipt-timestamp">Tgl: 06-09-2023 19:00:00</div>
+      <div id="receipt-op">Operator: Operator 1</div>
+      <hr />
+      <div id="receipt-meja">Meja: Meja 12, PS 2</div>
+      <div id="receipt-paket">Paket: 1 Jam</div>
+      <div id="receipt-mulai">Mulai: 06-09-2023 18:00:00</div>
+      <div id="receipt-selesai">Selesai: 06-09-2023 19:00:00</div>
+      <div id="receipt-lama-main">Lama main: 1 Jam</div>
+      <div id="receipt-bayar-main">
+        Bayar main: <span class="nominal">Rp. 5.000</span>
+      </div>
+      <hr />
+      <div class="font-bold" style="margin-bottom: 5px">Konsumsi</div>
+      <div class="receipt-konsumsi">
+        x2 Fanta <span class="nominal">Rp. 6,000</span>
+      </div>
+      <div class="receipt-konsumsi">
+        x1 Beng beng <span class="nominal">Rp. 2,000</span>
+      </div>
+      <div class="receipt-konsumsi">
+        x1 Mie goreng <span class="nominal">Rp. 5,000</span>
+      </div>
+      <div class="receipt-konsumsi">
+        x1 Le Minerale <span class="nominal">Rp. 3,000</span>
+      </div>
+
+      <div class="receipt-bayar-konsumsi">
+        Total <span class="nominal">Rp. 16,000</span>
+      </div>
+
+      <hr />
+      <div class="text-center font-bold" id="receipt-total">Rp. 21,000</div>
+      <hr />
+      <div class="text-center font-bold" id="receipt-footer-1">
+        TERIMA KASIH
+      </div>
+      <div class="text-center font-bold" id="receipt-footer-2">
+        DATANG KEMBALI
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
